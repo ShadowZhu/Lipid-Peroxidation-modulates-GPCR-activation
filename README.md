@@ -16,10 +16,10 @@ Statistical analyses including mean, standard deviation, quartiles, etc. calcula
 
 The folder `MD_configurations` contains the initial and final configurations for all the simulations presented in the study. The files are organized into folders labeled System_\#. The system description is shown in the table below and also inside a README.md file in each folder.
 
-| System                           | Total Nr. of Atoms | Box dimensions (nm) | Nr. of Lipids | Nr. of Waters | Cl- | Na+ |
-|----------------------------------|--------------------|---------------------|---------------|---------------|-----|-----|
-| (1) DUPC + AT1R + S1I8           | 99,132             | 10x10x11.8          | 300           | 27,388        | 13  |  0  |
-| (2) DUPO(O13) +  AT1R + S1I8     | 112,330            | 10.4x0.4x13.5       | 304           | 31,068        | 13  |  0  |
-| (3) DUPO(O9) +  AT1R + S1I8      | 106,560            | 10.4x10.4x13.5      | 298           | 29,050        | 13  |  0  |
-| (4) DUPO(O13X2) +  AT1R + S1I8   | 90,885             | 9.5x9.5x13          | 300           | 23,789        | 13  |  0  |
-| (5) DUPO(O9X2) +  AT1R + S1I8    | 106,662            | 10.4x10.4x13.5      | 298           | 29,050        | 13  |  0  |
+| System                           | Total Nr. of Atoms | Box dimensions (nm) | Nr. of Lipids | Nr. of Waters | Cl-  | Na+  |
+|----------------------------------|--------------------|---------------------|---------------|---------------|------|------|
+| (1) DUPC + AT1R + S1I8           | 215,607            | 12.9x12.8x12.9      | 445           | 50,070        | 209  | 197  |
+| (2) DUPO(O13) +  AT1R + S1I8     | 216,152            | 12.9x13.1x12.5      | 442           | 50,091        | 209  | 197  |
+| (3) DUPO(O9) +  AT1R + S1I8      | 217,013            | 12.8x12.9x12.9      | 448           | 50,106        | 209  | 197  |
+| (4) DUPO(O13X2) +  AT1R + S1I8   | 217,593            | 14.2x14.2x10.6      | 450           | 49,892        | 258  | 198  |
+| (5) DUPO(O9X2) +  AT1R + S1I8    | 217,613            | 13.3x13.5x11.8      | 448           | 49,990        | 259  | 199  |
