@@ -1,20 +1,43 @@
-# Lipid peroxidation modulates GPCR activation through site-specific lipid–protein hydrogen bonds and membrane reorganization
-
-These data/instructions acompany the folowing manuscript: <br>
+# Data and Input Files for: Lipid peroxidation modulates GPCR activation through site-specific lipid–protein hydrogen bonds and membrane reorganization
+This repository contains the GROMACS input files and simulation parameters accompanying the manuscript: <br>
 
 **Title**: Lipid peroxidation modulates GPCR activation through site-specific lipid–protein hydrogen bonds and membrane reorganization.<br>
 
-**Authors**: Ying Zhu (Nanjing University), Yiyang Zhang (Nanjing University), Zhengxi Qian (Nanjing University), Yachong Guo (Nanjing University), Wei Wang (Nanjing University)<br>
+**Authors**: Ying Zhu, Yiyang Zhang, Zhengxi Qian, Yachong Guo, and Wei Wang (Nanjing University)<br>
 
-### Data and plotting scripts for figures in the main text and supplementary information
+### Overview
 
-Each folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file. 
+This repository provides all necessary input files to reproduce the all-atom molecular dynamics (MD) simulations described in the study. The goal is to ensure the reproducibility of our key findings by providing the initial structures, topologies, force field parameters, and simulation control files for all five systems investigated.
 
-Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.
+Note: This repository does not contain the full simulation trajectories due to their large size.
 
-### Initial and final configurations of MD simulations
+### Software and Force Field Requirements
+Simulation Engine: GROMACS (version 2022.x or later recommended)
 
-The folder `MD_configurations` contains the initial and final configurations for all the simulations presented in the study. The files are organized into folders labeled System_\#. The system description is shown in the table below and also inside a README.md file in each folder.
+Force Field (Protein, Ions, Water): CHARMM36m
+
+Force Field (Lipids): CHARMM36 for DUPC. Parameters for the peroxidized lipids are provided within the topology files (.itp), derived as described in the manuscript's methods section.
+
+### Repository Contents & Usage
+The primary folder, MD_configurations, contains five subdirectories, one for each simulated system.
+
+Each system directory (e.g., DUPC/) contains the complete set of files required to run a simulation for that specific system:
+
+initial.pdb: The starting coordinates of the solvated system.
+
+topol.top: The main GROMACS topology file that includes all molecules.
+
+*.itp: All necessary include topology files for the force field, molecules, and water model.
+
+*.mdp: GROMACS simulation parameter files for each stage (energy minimization, equilibration, and production run).
+
+A typical GROMACS workflow for each system would involve using these files sequentially for energy minimization, NVT/NPT equilibration, and finally, the production run.
+
+
+
+### System Descriptions
+
+The five systems simulated in this study are detailed below.
 
 | System                           | Total Nr. of Atoms | Box dimensions (nm) | Nr. of Lipids | Nr. of Waters | Cl-  | Na+  |
 |----------------------------------|--------------------|---------------------|---------------|---------------|------|------|
